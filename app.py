@@ -24,7 +24,7 @@ db = fb.database()
 # Test route til að setja gögn í db
 @app.route('/')
 def index():
-    db.child("user").push({"usr":"dsg", "pwd":1234}) 
+    #db.child("user").push({"usr":"dsg", "pwd":1234}) 
     return render_template("index.html")
 
 @app.route("/login", methods=["GET","POST"])
@@ -85,9 +85,15 @@ def logout():
     return render_template("index.html")
 if __name__ == "__main__":
 	app.run(debug=True)
-@app.route("/register")
+
+@app.route('/register')
 def register():
-    return render_template("register.html")
+	return render_template("register.html")
+
+# gott að sjá debug í vafranum -- taka út (debug=True) á heroku
+
+if __name__ == "__main__":
+	app.run(debug=True)
 
 # skrifum nýjan í grunn hnútur sem heitir notandi 
 # db.child("notandi").push({"notendanafn":"dsg", "lykilorð":1234}) 
