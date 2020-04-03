@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" href="/static/style.css">
+    <meta charset="UTF-8">
+    <title>Login</title>
+</head>
+<body>
+    <h2>Login to access the secret site!</h2>
+    <form action="/login" method="POST">
+        <div class="container">
+            <label for="uname"><b>Username</b></label>    
+            <input type="text" placeholder="Enter Username" name="uname" required>
+            <label for="psw"><b>Password</b></label>
+            <input type="password" placeholder="Enter password" name="psw" required>
+            <button type="submit">Login</button>
+        </div>
+        <div class="container" style="background-color: antiquewhite;">
+            <h5>If you don't have an account then register below!</h5>
+            <a href="/register"><button type="button" class="cancelbtn">Register</button></a>
+        </div>
+    </form>
+</body>
+</html>
