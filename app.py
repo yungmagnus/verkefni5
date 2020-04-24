@@ -15,7 +15,7 @@ config = {
     "messagingSenderId": "177410401123",
     "appId": "1:177410401123:web:3c9b02b1c15cdd1b9de956",
     "measurementId": "G-H026MVXZL9"
-};
+}
 
 fb = pyrebase.initialize_app(config)
 db = fb.database()
